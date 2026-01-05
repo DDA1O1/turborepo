@@ -1,16 +1,16 @@
-import { createRootRoute, Outlet } from '@tanstack/react-router'
-import { Providers } from '../../components/providers'
+import { Outlet, createRootRoute } from "@tanstack/react-router";
+import { Providers } from "../../components/providers";
 
 export const Route = createRootRoute({
-    component: RootLayout,
-})
+  component: RootLayout,
+});
 
 function RootLayout() {
-    return (
-        <Providers>
-            <div className="font-sans antialiased">
-                <Outlet />
-            </div>
-        </Providers>
-    )
+  return (
+    <Providers>
+      <div className="font-sans antialiased">
+        <Outlet />
+      </div>
+    </Providers>
+  );
 }
